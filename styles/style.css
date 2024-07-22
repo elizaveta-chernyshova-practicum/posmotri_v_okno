@@ -178,7 +178,9 @@ html {
   margin: -1px; /* элемент убирают из поля зрения, сдвинув на размер самого себя */
   padding: 0; /* обнуляют отступы, они есть у некоторых элементов по умолчанию */
   border: 0; /* убирают границу, она тоже может быть у каких-то элементов */
-  clip: rect(0 0 0 0); /* это свойство обрезает видимую область до нулевого значения */
+  clip: rect(
+    0 0 0 0
+  ); /* это свойство обрезает видимую область до нулевого значения */
   overflow: hidden; /* на всякий случай скрывают видимое за пределами блока */
 }
 
@@ -280,13 +282,12 @@ input {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid #000000;
+  box-sizing: border-box;
 }
 
 .search-form__pseudo-checkbox {
@@ -299,14 +300,10 @@ input {
   box-sizing: border-box;
 }
 
-.search-form__checkbox:focus-visible ~ .search-form__label-text::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 1px solid rgba(255, 255, 255, 1);
+.search-form__label:has(.search-form__checkbox:focus-visible) {
+  outline: 1px solid rgba(255, 255, 255, 1);
+  border: none;
+  outline-offset: 1px;
 }
 
 .search-form__label:hover .search-form__label-text {
