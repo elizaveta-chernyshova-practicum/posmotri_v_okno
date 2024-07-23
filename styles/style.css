@@ -120,7 +120,7 @@ html {
 }
 
 .content__video-card-description-container {
-  width: 200px;
+  width: 100%;
   height: 107px;
   line-height: 16.2px;
 }
@@ -278,14 +278,6 @@ input {
   font-size: 18px;
   cursor: pointer;
 }
-
-/* .search-form__checkbox {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-} */
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
