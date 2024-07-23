@@ -1,0 +1,1 @@
+CSS Selectors and Accessibility Project Overview This project is designed to enhance your understanding of CSS selectors and accessibility in web development. You will learn how to apply various CSS selectors effectively and ensure your web content is accessible to all users. Link https://github.com/elizaveta-chernyshova-practicum/posmotri_v_okno
