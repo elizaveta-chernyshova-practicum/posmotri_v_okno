@@ -102,7 +102,6 @@ html {
 
 .content__list {
   overflow-y: auto;
-  overflow-x: hidden;
   width: 398px;
   height: 298px;
   display: flex;
